@@ -8,7 +8,37 @@
 </head>
 <body>
 
+<div class="wrapper">
+
+<search>
+<form>
+    <input class="searcbar transparent" id="search" type="text" placeholder="enter enter, country" />
+    <input class="button transparent" id="button" type="submit" value="GO" />
+</form>
+</search>
+
+<div class='panel'>
+    <h2 class='city' id='city'></h2>
+    <div class='weather' id='weather'>
+      <div class='group secondary'>
+        <h3 id='dt'></h3>
+        <h3 id='description'></h3>
+      </div>
+      <div class='group secondary'>
+        <h3 id='wind'></h3>
+        <h3 id='humidity'></h3>
+      </div>
+      <div class='temperature' id='temperature'>
+        <h1 class='temp' id='temp'><i id='condition'></i> <span id='num'></span><a class='fahrenheit active' id='fahrenheit' href="#">&deg;F</a><span class='divider secondary'>|</span><a class='celsius' id='celsius' href="#">&deg;C</a></h1>
+      </div>
+      <div class='forecast' id='forecast'></div>
+    </div>
+  </div>
+
     
+</div>
+
+
     
 
     <script src="jquery-3.5.1.min.js"></script>
