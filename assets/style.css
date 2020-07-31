@@ -57,3 +57,44 @@ a:hover,
   color: white;
   opacity: 0.35;
 }
+
+.searchbar::-moz-placeholder {
+  color: white;
+  opacity: 0.35;
+}
+
+.searchbar:-ms-input-placeholder {
+  color: white;
+  opacity: 0.35;
+}
+
+.searchbar:-moz-placeholder {
+  color: white;
+  opacity: 0.35;
+}
+
+.button:focus,
+.searchbar:focus {
+  outline: none;
+  color: white;
+}
+
+.searchbar:focus::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.searchbar:focus::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.searchbar:focus:-ms-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.searchbar:focus:-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+}
