@@ -17,13 +17,43 @@ h4 {
 
 
 a {
-    color: white;
-    opacity: 0.54;
-    text-decoration: none;
-  }
-  
-  a:hover,
-  .active {
-    opacity: 1;
-  }
-  
+  color: white;
+  opacity: 0.54;
+  text-decoration: none;
+}
+
+a:hover,
+.active {
+  opacity: 1;
+}
+
+
+.wrapper {
+  width: 480px;
+  margin: 0 auto;
+}
+
+.searchbar,
+.button {
+  height: 45px;
+  margin: 1em 0 4em;
+  padding: 0;
+  font: 400 1rem "futura";
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+}
+
+.searchbar {
+  float: left;
+  width: 380px;
+  border-bottom: solid thin white;
+  color: #e8e8e8;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.searchbar::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.35;
+}
