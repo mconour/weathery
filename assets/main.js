@@ -1,4 +1,4 @@
-titleCase = () => {
+titleCase = (str) => {
     return str
         .split(" ")
         .map(function (word) {
@@ -106,13 +106,27 @@ $(function () {
                 $(this).addClass("active").removeAttr("href");
                 $fahrenheit.removeClass("active").attr("href", "#");
                 $tempNumber.html(Math.round((data.main.temp - 32) * (5 / 9)));
-              }
-        
-              toFahrenheit = () => {
+            }
+
+            toFahrenheit = () => {
                 $(this).addClass("active").removeAttr("href");
                 $celsius.removeClass("active").attr("href", "#");
                 $tempNumber.html(Math.round(data.main.temp));
-              }
+            }
+
+            setBackground = (background, button) => {
+                $("body").removeClass().addClass(background);
+                $button.off().hover(
+                    function () {
+                        $(this).removeClass("transparent").addClass(button);
+                    },
+                    function () {
+                        $(this).removeClass().addClass("button transparent");
+                    }
+                );
+            }
+
+
 
         })
 
