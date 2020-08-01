@@ -81,12 +81,39 @@ $(function () {
         $icon.removeClass();
         $button.removeClass().addClass("button transparent");
 
-        requestWeather.done(function(data) {
+        requestWeather.done(function (data) {
             let weather = document.getElementById("weather");
             if (data.cod === "404") {
                 $city.html("color404", "button404");
                 weather.style.display = "none";
             } else weather.style.display = "";
+
+            let dt = new Date(data.dt * 1000).toString().split(" ");
+
+            let title = data.sys.country ? data.name + ", " + data.sys.country : data.name;
+
+            $city.html(title);
+            $tempNumber.html(Math.round(data.main.temp));
+            $description.html(titleCase(data.weather[0].description));
+            $wind.html("Wind: " + data.wind.speed + " mph");
+            $humidity.html("Humidity " + data.main.humidity + "%");
+            $dt.html(fullDay(dt[0]) + " " + dt[4].substring(0, 5));
+
+            $celsius.on("click", toCelsius);
+            $fahrenheit.on("click", toFahrenheit);
+
+            toCelsius = () => {
+                $(this).addClass("active").removeAttr("href");
+                $fahrenheit.removeClass("active").attr("href", "#");
+                $tempNumber.html(Math.round((data.main.temp - 32) * (5 / 9)));
+              }
+        
+              toFahrenheit = () => {
+                $(this).addClass("active").removeAttr("href");
+                $celsius.removeClass("active").attr("href", "#");
+                $tempNumber.html(Math.round(data.main.temp));
+              }
+
         })
 
     }
