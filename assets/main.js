@@ -45,8 +45,15 @@ $(function() {
     $button = $form.find("#button");
 
 
+    $.ajax({
+        dataType: "json",
+        url: "https://ipapi.co/json"
+    }).then(function(data) {
+        let myLocation = `${data.city}, ${data.postal}, ${data.country}`;
+        console.log(myLocation);
+        getWeather(myLocation);
+    });
 
 
-    
 
 })
