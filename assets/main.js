@@ -81,6 +81,14 @@ $(function () {
         $icon.removeClass();
         $button.removeClass().addClass("button transparent");
 
+        requestWeather.done(function(data) {
+            let weather = document.getElementById("weather");
+            if (data.cod === "404") {
+                $city.html("color404", "button404");
+                weather.style.display = "none";
+            } else weather.style.display = "";
+        })
+
     }
 
 })
