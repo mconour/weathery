@@ -40,8 +40,8 @@ $(function () {
         fahrenheit = temp.find("#fahrenheit"),
         $forecast = weather.find("#forecast"),
         search = wrapper.find("search"),
-        $form = search.find("form"),
-        button = $form.find("#button");
+        form = search.find("form"),
+        button = form.find("#button");
 
     $.ajax({
         dataType: "json",
@@ -224,7 +224,7 @@ $(function () {
         });
     }
 
-    $form.submit(function (event) {
+    form.submit(function (event) {
         var input = document.getElementById("search").value;
         var inputLength = input.length;
         if (inputLength) getWeather(input);
