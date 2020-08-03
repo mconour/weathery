@@ -6,41 +6,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weathery - For a Better Shine</title>
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/testing.css">
 </head>
 
-<body>
+<body>  
 
-  <div class="wrapper">
+ 
+    
 
-    <search>
-      <form>
-        <input class="searchbar transparent" id="search" type="text" placeholder="enter city, country" />
-        <input class="button transparent" id="button" type="submit" value="GO" />
-      </form>
-    </search>
+     <div class="ipad-pro-portrait">
+      <div class="bezel"></div>
+      <div class="casing"></div>
+      <div class="camera"></div>
+      <div class="home-btn"></div>
+   
+        <div class="wrapper">
 
-    <div class='panel'>
-      <h2 class='city' id='city'></h2>
-      <div class='weather' id='weather'>
-        <div class='group secondary'>
-          <h3 id='dt'></h3>
-          <h3 id='description'></h3>
-        </div>
-        <div class='group secondary'>
-          <h3 id='wind'></h3>
-          <h3 id='humidity'></h3>
-        </div>
-        <div class='temperature' id='temperature'>
-          <h1 class='temp' id='temp'><i id='condition'></i> <span id='num'></span><a class='fahrenheit active'
-              id='fahrenheit' href="#">&deg;F</a><span class='divider secondary'>|</span><a class='celsius' id='celsius'
-              href="#">&deg;C</a></h1>
-        </div>
-        <div class='forecast' id='forecast'></div>
+          <h1>Weathery</h1>
+          <p>a simple javascript application</p> 
+
+          <search>
+            <form>
+              <input class="search-bar transparent" id="search" type="text" placeholder="enter city, country" />
+              <input class="button transparent" id="button" type="submit" value="GO" />
+            </form>
+          </search>
+      
+          <div class='main-display'>
+            <h2 class='city' id='city'></h2>
+            <div class='weather' id='weather'>
+              <div class='group secondary'>
+                <h3 id='dt'></h3>
+                <h3 id='description'></h3>
+              </div>
+              <div class='group secondary'>
+                <h3 id='wind'></h3>
+                <h3 id='humidity'></h3>
+              </div>
+              <div class='temperature' id='temperature'>
+                <h1 class='temp' id='temp'>
+                  
+                  <i id='condition'></i> 
+                  
+                  <span id='num'></span><a class='fahrenheit active'
+                    id='fahrenheit' href="#">&deg;F</a><span class='divider secondary'>|</span><a class='celsius' id='celsius'
+                    href="#">&deg;C</a></h1>
+              </div>
+              <div class='forecast' id='forecast'></div>
+            </div>
+          </div>
+
       </div>
-    </div>
+   
+     
+
+  
 
 
-  </div>
 
 
 
