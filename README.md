@@ -2,6 +2,6 @@
 
 ```
 Frameworks & Libraries: JavaScript 
-Other: OpenWeatherMap API, ipapi, CSS, HTML, Weather Icons by Erik Flowers
+Other: OpenWeatherMap API, ipapi, CSS, HTML, weather icons by Erik Flowers
 ```
 
