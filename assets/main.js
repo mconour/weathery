@@ -1,4 +1,4 @@
-function titleCase(str) {
+titleCase = (str) => {
     return str
         .split(" ")
         .map(function (word) {
@@ -7,7 +7,7 @@ function titleCase(str) {
         .join(" ");
 }
 
-function fullDay(str) {
+fullDay = (str) => {
     switch (str) {
         case "Tue":
             return "Tuesday";
@@ -25,7 +25,7 @@ function fullDay(str) {
 $(function () {
     var wrapper = $(".wrapper"),
         mainDisplay = wrapper.find(".main-display"),
-        $city = mainDisplay.find("#city"),
+        city = mainDisplay.find("#city"),
         weather = mainDisplay.find(".weather"),
         group = mainDisplay.find(".group"),
         $dt = group.find("#dt"),
@@ -36,12 +36,12 @@ $(function () {
         temp = temperature.find("#temp"),
         icon = temp.find("#condition"),
         tempNumber = temp.find("#num"),
-        $celsius = temp.find("#celsius"),
+        celsius = temp.find("#celsius"),
         fahrenheit = temp.find("#fahrenheit"),
         $forecast = weather.find("#forecast"),
-        $search = wrapper.find("search"),
-        $form = $search.find("form"),
-        $button = $form.find("#button");
+        search = wrapper.find("search"),
+        $form = search.find("form"),
+        button = $form.find("#button");
 
     $.ajax({
         dataType: "json",
@@ -74,14 +74,14 @@ $(function () {
         });
 
         fahrenheit.addClass("active").removeAttr("href");
-        $celsius.removeClass("active").attr("href", "#");
+        celsius.removeClass("active").attr("href", "#");
         icon.removeClass();
-        $button.removeClass().addClass("button transparent");
+        button.removeClass().addClass("button transparent");
 
         requestWeather.done(function (data) {
             var weather = document.getElementById("weather");
             if (data.cod === "404") {
-                $city.html("city not found");
+                city.html("city not found");
                 setBackground("color404", "button404");
                 weather.style.display = "none";
             } else weather.style.display = "";
@@ -92,14 +92,14 @@ $(function () {
                 data.name + ", " + data.sys.country :
                 data.name;
 
-            $city.html(title);
+            city.html(title);
             tempNumber.html(Math.round(data.main.temp));
             description.html(titleCase(data.weather[0].description));
             wind.html("Wind: " + data.wind.speed + " mph");
             humidity.html("Humidity " + data.main.humidity + "%");
             $dt.html(fullDay(dt[0]) + " " + dt[4].substring(0, 5));
 
-            $celsius.on("click", toCelsius);
+            celsius.on("click", toCelsius);
             fahrenheit.on("click", toFahrenheit);
 
             function toCelsius() {
@@ -110,14 +110,14 @@ $(function () {
 
             function toFahrenheit() {
                 $(this).addClass("active").removeAttr("href");
-                $celsius.removeClass("active").attr("href", "#");
+                celsius.removeClass("active").attr("href", "#");
                 tempNumber.html(Math.round(data.main.temp));            }
 
 
 
             function setBackground(background, btn) {
                 $("body").removeClass().addClass(background);
-                $button.off().hover(
+                button.off().hover(
                     function () {
                         $(this).removeClass("transparent").addClass(btn);
                     },
@@ -177,7 +177,7 @@ $(function () {
 
 
         requestForecast.done(function (data) {
-            $celsius.on("click", toCelsius);
+            celsius.on("click", toCelsius);
             fahrenheit.on("click", toFahrenheit);
 
             var forecast = [];
