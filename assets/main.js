@@ -28,7 +28,7 @@ $(function () {
         city = mainDisplay.find("#city"),
         weather = mainDisplay.find(".weather"),
         group = mainDisplay.find(".group"),
-        $dt = group.find("#dt"),
+        dateTime = group.find("#dt"),
         description = group.find("#description"),
         wind = group.find("#wind"),
         humidity = group.find("#humidity"),
@@ -97,7 +97,7 @@ $(function () {
             description.html(titleCase(data.weather[0].description));
             wind.html("Wind: " + data.wind.speed + " mph");
             humidity.html("Humidity " + data.main.humidity + "%");
-            $dt.html(fullDay(dt[0]) + " " + dt[4].substring(0, 5));
+            dateTime.html(fullDay(dt[0]) + " " + dt[4].substring(0, 5));
 
             celsius.on("click", toCelsius);
             fahrenheit.on("click", toFahrenheit);
