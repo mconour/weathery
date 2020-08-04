@@ -54,8 +54,19 @@ a:hover,
   margin: 0 auto;
 } */
 
-.wrapper {
+/* .wrapper {
   width: 480px;
+  max-width: 100%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+} */
+
+
+.wrapper {
+  width: 640px;
   max-width: 100%;
   position: absolute;
   top: 55%;
@@ -141,10 +152,18 @@ a:hover,
   width: 100%;
   display: inline-block;
 }
-
+/* 
 .weather {
   width: 100%;
   margin-top: 20px;
+  display: inline-block;
+} */
+
+
+
+.weather {
+  width: 100%;
+  margin-top: 40px;
   display: inline-block;
 }
 
@@ -156,18 +175,29 @@ a:hover,
   color: rgba(255, 255, 255, 0.7);
 }
 
-.group {
+/* .group {
   width: 165px;
   margin-bottom: 20px;
   text-align: right;
   float: right;
   clear: both;
+} */
+
+
+.group {
+  width: 165px;
+  margin-bottom: 20px;
+  text-align: right;
+  float: right;
+  
 }
+
 
 .temp {
   font-size: 4.5em;
   font-weight: 300;
   line-height: 0.75;
+  margin-top: -11px;
 }
 
 .celsius,
