@@ -1,7 +1,7 @@
 # Weathery Application
 
 ```
-Frameworks & Libraries: JavaScript 
+Languages: JavaScript, HTML5, CSS3
 Other: OpenWeatherMap API, ipapi, CSS, HTML, weather icons by Erik Flowers
 ```
 
