@@ -47,8 +47,4 @@ Please note that this is just the JavaScript portion of Weathery, and you need t
 
 Feel free to modify and enhance this code as needed for your specific web development project.
 
-**Author:** mconour
-
-**License:** 
-
 For additional information on setting up Weathery and using it with an HTML page, please refer to the source code and any accompanying documentation.
